@@ -10,7 +10,7 @@ def parse_input(req):
     var = request[2]
 
     if method == 'create':
-        add(namespace, var)
+        add(var, namespace)
     if method == 'add':
         add(namespace, var)
     if method == 'get':
