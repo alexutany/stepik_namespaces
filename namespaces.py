@@ -10,25 +10,11 @@ def parse_input(req):
     var = request[2]
 
     if method == 'create':
-        create(namespace, var)
+        add(namespace, var)
     if method == 'add':
         add(namespace, var)
     if method == 'get':
         print(get(namespace, var))
-
-def create(namespace, parent):
-    
-    for item in namespaces:
-        if item['name'] == namespace:
-            item['children'].append(var)
-
-    element = {
-        'name': namespace,
-        'parent': parent,
-        'children': [] 
-        }
-    
-    namespaces.append(element)
 
 def add(namespace, var):
     
